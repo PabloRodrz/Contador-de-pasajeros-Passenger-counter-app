@@ -22,7 +22,10 @@ const save = () => {
 
 const end = () => {
   restartCount()
-  if(saveEl.textContent.charAt(saveEl.textContent.length-2) === '-')  {
+  if(saveEl.textContent === 'Previous entries: '){
+    saveEl.style = "block";
+  }
+   if(saveEl.textContent.charAt(saveEl.textContent.length-2) === '-')  {
       saveEl.textContent = saveEl.textContent.slice(0, -2)
   }
       saveEl.textContent += 'End of the turn'
